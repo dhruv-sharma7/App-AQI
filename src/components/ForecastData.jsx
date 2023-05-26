@@ -3,6 +3,12 @@
 import React from 'react'
 
 const ForecastData = ({data}) => {
+    if (!data || !data.data || !data.data.city) {
+        return null; // or render a placeholder, an error message, or return a loading state
+      }
+    
+
+
   return (
     <>
 

@@ -14,6 +14,10 @@ const Aqisearchapp= () => {
 
   const submitSearch = async(e) => {
     e.preventDefault();
+    if (!city) {
+        return; // Stop execution if the city is empty
+      }
+  
     let dataURL=`https://api.waqi.info/feed/${city}/?token=${KEY}`;
 
     let response =await axios.get(dataURL)
