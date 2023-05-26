@@ -6,6 +6,8 @@ const ForecastData = ({data}) => {
   return (
     <>
 
+
+
   <div className="container mt-3">
 <div className="row " >
     <div className="col text-center">
@@ -14,58 +16,64 @@ const ForecastData = ({data}) => {
 </div>
 
 
- <div className="row">
+  <div className="row">
     <div className="col">
         
-    <div class="card" >
-  <div class="card-header">
+    <div className="card" >
+  <div className="card-header">
     
   </div>
 
   <ul className="list-group list-group-flush">
-    <li class="list-group-item">
+    <li className="list-group-item">
         <div className="d-flex justify-content-between">
             <span>
 Location
             </span>
             <span>
-{data.data.city.name}
+
+{data.data.city.name ?? 'Not Availiable'}
             </span>
         </div>
     </li>
-    <li class="list-group-item">
+    <li className="list-group-item">
         <div className="d-flex justify-content-between">
             <span>
 Last Updated
             </span>
             <span>
-                {data.data.time.s}
+               
+                {data.data.time.s?? 'Not Availiable'}
                 
             </span>
         </div>
     </li>
 
 
-    <li class="list-group-item">
+    <li className="list-group-item">
         <div className="d-flex justify-content-between">
             <span>
 AQI
             </span>
             <span>
-                {data.data.aqi}
+              
+
+                {data.data.aqi?? 'Not Availiable'}
                 
             </span>
         </div>
     </li>
 
 
-    <li class="list-group-item">
+    <li className="list-group-item">
         <div className="d-flex justify-content-between">
             <span>
 Dew
             </span>
             <span>
-                {data.data.iaqi.dew.v}
+                
+
+                {data.data.iaqi.dew.v?? 'Not Availiable'}
                 
             </span>
         </div>
@@ -84,7 +92,7 @@ Dew
     </div>
 
 
-    </div> 
+    </div>    
     </div>
 
 

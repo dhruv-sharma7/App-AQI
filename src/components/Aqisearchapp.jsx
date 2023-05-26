@@ -10,13 +10,14 @@ const Aqisearchapp= () => {
 
     const [city,setcity]=useState("")
 
-    const [predictions, setpredictions]=useState()
+    const [predictions, setpredictions]=useState({})
 
   const submitSearch = async(e) => {
     e.preventDefault();
     let dataURL=`https://api.waqi.info/feed/${city}/?token=${KEY}`;
 
     let response =await axios.get(dataURL)
+    
    setpredictions(response.data);
    console.log(response.data);
    
